@@ -1,0 +1,46 @@
+.button-container {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 0px;
+    max-width: 100%; /* Ensure the button container doesn't exceed the post container */
+    flex-wrap: wrap;
+  }
+  
+  .button-like,
+  .button-comment,
+  .button-share {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1; /* Allow buttons to take equal space */
+    margin: 2px; /* Add margin between buttons */
+  }
+  
+  .button-like {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .button-comment {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .button-share {
+    background-color: #1abc9c;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: flex-start; /* Align buttons to the left */
+    }
+  
+    .button-like,
+    .button-comment,
+    .button-share {
+      max-width: 100%; /* Allow buttons to take full width */
+    }
+  }

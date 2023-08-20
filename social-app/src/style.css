@@ -1,0 +1,19 @@
+.dark-mode-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode-button {
+    color: white;
+  }
+  
+  /* Light mode styles */
+  .dark-mode-button.light-mode {
+    color: black;
+  }

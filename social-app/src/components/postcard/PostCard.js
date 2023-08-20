@@ -3,19 +3,22 @@ import pic from '../../images/pic.jpg';
 import pic2 from './../../images/pic2.jpeg';
 import pic3 from './../../images/pic3.jpeg';
 import pic4 from './../../images/pic4.jpeg';
+import Option from '../options/Option';
+import Button from '../buttons/Button';
 
 
 const PostCard = () => {
     const currentDate = new Date();
     const images =[
-        pic,
-        pic2,
-        pic3,
-        pic4,
+        // pic,
+        // pic2,
+        //  pic3,
+        //  pic4,
         pic
     ];
     return(
         <div className="post-container">
+            <Option />
             <div className="post-row">
                 <div className="display-pic">
                     <img src={pic} alt="display pic" />
@@ -34,19 +37,29 @@ const PostCard = () => {
             </div>
             <div className="post-row">
                 <div className="image-container">
-                    {images.slice(0, 4).map((image, index) => (
+
+                {images.length === 1 ? (
+                    <img
+                    src={images[0]}
+                    alt="PostImg"
+                    className="single-image"
+                    />
+                ) :
+
+                    images.slice(0, 4).map((image, index) => (
                     <div key={`image-${index}`} className="image-wrapper">
                         <img src={image} alt={`Img-${index}`} />
-                    {index === 3 && images.length > 4 && (
-                    <div className="more-images">
-                        +{images.length - 4} more
-                    </div>
-                    )}
+                            {index === 3 && images.length > 4 && (
+                            <div className="more-images">
+                                +{images.length - 4} more
+                            </div>
+                            )}
                     </div>
                     ))}
 
                 </div>
             </div>
+            <Button />
         </div>
     );
 };

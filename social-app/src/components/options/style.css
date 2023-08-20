@@ -1,0 +1,7 @@
+.post-options {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
